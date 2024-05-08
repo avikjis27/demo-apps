@@ -1,0 +1,14 @@
+{
+  "name": "nodejs-demo-webapp",
+  "version": "1.0.0",
+  "description": "Simple node app for demo purpose",
+  "main": "index.js",
+  "author": "Avik Chakraborty",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.7",
+    "express": "^4.17.3",
+    "nodemon": "^2.0.20",
+    "request": "^2.88.2"
+  }
+}

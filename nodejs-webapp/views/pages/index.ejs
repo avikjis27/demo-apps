@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nodejs demo webapp</title>
+
+<style>
+    .theme{
+        padding: 10em;
+        background-color: <%=env.BG_COLOR%>;
+        color: <%=env.FG_COLOR%>;
+        font-size: larger;
+    }
+    table{
+        border: 1px solid;
+        width: 80%;
+    }
+
+</style>
+
+</head>
+<body>
+    <div class="theme">
+        <h1>Demo nodejs web application</h1>
+        <h3>Server Details</h3>
+        <table>
+            <tr>
+                <td>Host Name</td>
+                <td><%=data.hostname%></td>
+            </tr>
+            <tr>
+                <td>User IP</td>
+                <td><%=data.userip%></td>
+            </tr>
+            <tr>
+                <td>Time</td>
+                <td><%=data.time%></td>
+            </tr>
+        </table>
+        <h3>Environment Details</h3>
+        <table>
+            <tr>
+                <td>Port</td>
+                <td><%=env.PORT%></td>
+            </tr>
+            <tr>
+                <td>FG Color</td>
+                <td><%=env.FG_COLOR%></td>
+            </tr>
+            <tr>
+                <td>BG Color</td>
+                <td><%=env.BG_COLOR%></td>
+            </tr>
+        </table>
+    </div>
+    
+</body>
+</html>
