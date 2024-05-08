@@ -1,7 +1,6 @@
 # Nodejs Demo app
 
-This is a simple node web application. This app display server details like hostname, time and user remote IP. It reads the `.env` file and diplay the
-environment variable in the webpage. The webpage's style (FG and BG color) can also be managed by the environment variable.  
+This is a simple node web application. This app displays server details like hostname, time, and user remote IP. It reads the `.env` file and displays the environment variable on the webpage. The environment variable can also manage the webpage's style (FG and BG color).
 
 ## Usage
 
