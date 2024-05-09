@@ -1,0 +1,7 @@
+apiVersion: v1
+data:
+  BG_COLOR: yellow
+  FG_COLOR: red
+kind: ConfigMap
+metadata:
+  name: app-config
