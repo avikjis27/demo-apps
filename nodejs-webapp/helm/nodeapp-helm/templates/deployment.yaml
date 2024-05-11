@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "nodeapp-helm.fullname" . }}
+  labels: 
+    app: {{ include "nodeapp-helm.fullname" . }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ include "nodeapp-helm.fullname" . }}
+  template:
+    metadata:
+      labels:
+        app: {{ include "nodeapp-helm.fullname" . }}
+    spec:
+      containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - name: http
+              containerPort: {{ .Values.service.port }}
+              protocol: TCP
+          env:
+          - name: BG_COLOR
+            valueFrom:
+              configMapKeyRef:
+                name: {{ include "nodeapp-helm.fullname" . }}
+                key: BG_COLOR
+          - name: FG_COLOR
+            valueFrom:
+              configMapKeyRef:
+                name: {{ include "nodeapp-helm.fullname" . }}
+                key: FG_COLOR
