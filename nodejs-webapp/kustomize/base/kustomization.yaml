@@ -1,0 +1,11 @@
+resources:
+  - deployment.yaml
+  - service.yaml
+commonLabels:
+  app: nodeapp
+
+commonAnnotations:
+  app: nodeapp-annotation
+
+namePrefix: kustom-
+nameSuffix: -v1

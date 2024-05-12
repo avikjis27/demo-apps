@@ -1,0 +1,11 @@
+bases:
+  - "../../base"
+
+namespace: dev
+  
+replicas:
+  - name: nodeapp
+    count: 1
+configMapGenerator:
+  - name: app-config
+    env: env.properties
